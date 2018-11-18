@@ -1,20 +1,24 @@
 const connection = require("./connection");
 
-const orm = {
-    selectAll: () => {
-        connection.query("SELECT * FROM burgers", promise);
+module.exports = {
+    selectAll: (tableName, callback) => {
+        connection.query("SELECT * FROM ??", [tableName], (error, results) => {
+            if (error) return console.error(error);
+            callback(results);
+        });
     },
-    insertOne: (burger) => {
-        connection.query("INSERT INTO burgers ??", burger, promise);
+    insertOne: (tableName, entryObject, callback) => {
+        connection.query("INSERT INTO ?? SET ?", [tableName, entryObject], (error, results) => {
+            if (error) return console.error(error);
+            callback(results);
+        });
     },
-    updateOne: (burger) => {
-        connection.query("UPDATE burgers SET ?? WHERE ??", [{ devoured: burger.devoured }, { id: burger.id }], promise);
+    updateOne: (tableName, updatedPropertiesObject, idObject, callback) => {
+        connection.query("UPDATE ?? SET ? WHERE ?",
+            [tableName, updatedPropertiesObject, idObject],
+            (error, results) => {
+                if (error) return console.error(error);
+                callback(results);
+        });
     }
 }
-
-function promise(error, result) {
-    if (error) return console.error(error);
-    return result;
-}
-
-module.exports = orm;

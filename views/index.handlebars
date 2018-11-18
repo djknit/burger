@@ -1,0 +1,31 @@
+<h1>Eat-da-Burger!</h1>
+
+<img src="/assets/images/burger.png" alt="Burger" height="150">
+
+<div id="burgers">
+    <div id="non-devoured" class="burgers">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <p class="burger">
+                        {{this.id}}. {{this.burger_name}}
+                    </p>
+                    <button burger="{{this.id}}">Devour!</button>
+                {{/unless}}
+            {{/each}}
+    </div>
+    <div id="devoured" class="burgers">
+        {{#each burgers}}
+            {{#if devoured}}
+                <p class="burger">
+                    {{this.id}}. {{this.burger_name}}
+                </p>
+            {{/if}}
+        {{/each}}
+    </div>
+</div>
+
+<div id="burger-input">
+    <textarea rows="2" cols="40" maxlength="60" placeholder="Enter a burger you would like to eat.&#10;(60 characters max)"></textarea>
+    <br>
+    <button id="submit">Submit</button>
+</div>

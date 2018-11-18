@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: tan;
+}
+
+h1 {
+    font-size: 38px;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+#burger-input {
+    max-width: 301px;
+    display: inline-block;
+    position: relative;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#submit {
+    position: absolute;
+    right: 0;
+}
+
+button {
+    background-color: whitesmoke;
+}
+
+#burgers {
+    margin-bottom: 30px;
+}
+
+.burgers {
+    display: inline-block;
+    width: 320px;
+    height: 20px;
+}
+
+.burger {
+    width: 240px;
+    background-color: white;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    display: inline-block;
+}

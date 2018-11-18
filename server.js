@@ -1,8 +1,9 @@
-var express = require("express");
+const express = require("express");
+const dotenv = require("dotenv").config();
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-var app = express();
+const app = express();
 
 // (From Bootcamp week 14 activity 16)
 // Serve static content for the app from the "public" directory in the application directory.
@@ -18,3 +19,8 @@ const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+const routes = require("./controllers/burgers_controller");
+
+app.use(routes);
+
+app.listen(PORT, () => console.log("Server listening on PORT " + PORT));
