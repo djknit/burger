@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
         const handlebarsObject = {
             burgers: results
         }
-        console.log(handlebarsObject);
         res.render("index", handlebarsObject);
     });
 });
@@ -23,7 +22,7 @@ router.post("/api/burgers", (req, res) => {
 
 router.put("/api/burgers/:id", (req, res) => {
     if (!req.params.id) return res.status(400).end();
-    burger.updateBurger(req.body, result => {
+    burger.updateBurger(req.params.id, result => {
         if (result.changedRows === 0) return res.status(404).end();
         res.status(200).end();
     });

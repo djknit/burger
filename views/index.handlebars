@@ -3,17 +3,16 @@
 <img src="/assets/images/burger.png" alt="Burger" height="150">
 
 <div id="burgers">
-    <div id="non-devoured" class="burgers">
+    <div class="burgers">
             {{#each burgers}}
                 {{#unless devoured}}
-                    <p class="burger">
-                        {{this.id}}. {{this.burger_name}}
-                    </p>
-                    <button burger="{{this.id}}">Devour!</button>
+                    <p class="burger">{{this.id}}. {{this.burger_name}}</p>
+                    <button burger="{{this.id}}" class="devour">Devour!</button>
                 {{/unless}}
             {{/each}}
     </div>
-    <div id="devoured" class="burgers">
+    <div class="burgers" id="devoured">
+        <p class="devoured">Devoured:</p>
         {{#each burgers}}
             {{#if devoured}}
                 <p class="burger">
@@ -25,7 +24,7 @@
 </div>
 
 <div id="burger-input">
-    <textarea rows="2" cols="40" maxlength="60" placeholder="Enter a burger you would like to eat.&#10;(60 characters max)"></textarea>
+    <textarea id="burger-name" placeholder="Enter a burger you would like to eat.&#10;(60 characters max)" rows="2" cols="40" maxlength="60"></textarea>
     <br>
-    <button id="submit">Submit</button>
+    <button id="submit-burger">Submit</button>
 </div>
