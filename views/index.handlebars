@@ -4,12 +4,12 @@
 
 <div id="burgers">
     <div class="burgers">
-            {{#each burgers}}
-                {{#unless devoured}}
-                    <p class="burger">{{this.id}}. {{this.burger_name}}</p>
-                    <button burger="{{this.id}}" class="devour">Devour!</button>
-                {{/unless}}
-            {{/each}}
+        {{#each burgers}}
+            {{#unless devoured}}
+                <p class="burger">{{this.id}}. {{this.burger_name}}</p>
+                <button burger="{{this.id}}" class="devour">Devour!</button>
+            {{/unless}}
+        {{/each}}
     </div>
     <div class="burgers" id="devoured">
         <p class="devoured">Devoured:</p>

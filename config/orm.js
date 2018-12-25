@@ -19,6 +19,7 @@ module.exports = {
             (error, results) => {
                 if (error) return console.error(error);
                 callback(results);
-        });
+            }
+        );
     }
 }
