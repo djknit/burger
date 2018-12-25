@@ -39,7 +39,7 @@ There is a form with a single input field where the user may type the name of a 
 #### Building the App
 If you wish to build the app yourself, clone the [repository](https://github.com/djknit/burger) to your local machine. You must have Node.js installed on your machine. You will also need to install MySQL and start a local MySQL server. If you set up your MySQL server to require a password, create a file named `.env` in the root directory of your local copy of the repository, copy and past the following line of code into the `.env` file, and replace "yourpassword" with your password.
 ```
-MY_SQL_PASSWORD=password
+MY_SQL_PASSWORD=yourpassword
 ```
 If your local MySQL server is running on a port other than 3306 or with a user other than "root", open `connection.js` in the `config` folder and replace the port and/or user values with your values. Create a database named `burgers_db`. Run the `schema.sql` located in the `db` folder. (In your MySQL environment program such as MySQL Workbench or HeidiSQL, run the command `USE burgers_db`. Then copy and paste the code from `schema.sql` and run it your SQL environment.) Navigate to the root directory of the repository in your command terminal and run `npm i` to install the Node packages that are dependencies of the app. You should now be ready to run the app.
 
