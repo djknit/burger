@@ -14,7 +14,7 @@ else {
 }
 
 connection.connect(error => {
-    if (error) return console.error(error);
+    if (error) return console.log(error);
     console.log("connected as id " + connection.threadId);
 });
 

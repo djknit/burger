@@ -1,21 +1,19 @@
-const orm = require("../config/orm");
+const { Model } = require("../config/orm");
 
-module.exports = {
-    getBurgerList: (callback) => orm.selectAll("burgers", callback),
-    insertBurger: (burgerName, callback) => orm.insertOne(
-        "burgers",
+const Burger = new Model(
+    'burgers',
+    [
         {
-            burger_name: burgerName,
-            devoured: false
-        },
-        callback
-    ),
-    updateBurger: (burgerId, callback) => {
-        orm.updateOne(
-            "burgers",
-            { devoured: true },
-            { id: burgerId },
-            callback
-        );
-    }
-}
+            name: 'burger_name',
+            type: 'text',
+            size: 60,
+            notNull: true
+        }, {
+            name: 'devoured',
+            type: 'boolean',
+            notNull: true
+        }
+    ]
+);
+
+module.exports = Burger;
