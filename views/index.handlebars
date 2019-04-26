@@ -2,6 +2,12 @@
 
 <img src="/assets/images/burger.png" alt="Burger" height="150">
 
+{{#if err}}
+    <br /><br />
+    <p class="error">ERROR: {{err}}</p>
+    <br /><br /><br />
+{{/if}}
+
 <div id="burgers">
     <div class="burgers">
         {{#each burgers}}
@@ -24,6 +30,12 @@
 </div>
 
 <div id="burger-input">
-    <textarea id="burger-name" placeholder="Enter a burger you would like to eat.&#10;(60 characters max)" rows="2" cols="40" maxlength="60"></textarea>
+    <textarea
+        id="burger-name"
+        placeholder="Enter a burger you would like to eat.&#10;(60 characters max)"
+        rows="2"
+        cols="40"
+        maxlength="60"
+    ></textarea>
     <button id="submit-burger">Submit</button>
 </div>
