@@ -21,13 +21,7 @@
 * Allow users from across the world to come together and make a list hamburgers.
 
 ## Project Features
-* Uses an MVC pattern with a custom built ORM.
-
-* There is a form with a single input field where the user may type the name of a burger that they would like to eat.
-  * Upon submission, a new record is created in the database for the burger. The page is updated with the current burger list and the new burger appears on the left side of the page with a button labeled "Devour!"
-  * The user may add as many burgers as they would like.
-
-* When the "Devour!" button is pressed, the record for that burger is updated in the database to show that it has been devoured. The page then updates and the newly devoured burger (along with all previously devoured burgers) is now displayed on the right side of the screen.
+There is a form with a single input field where the user may type the name of a burger that they would like to eat. Upon submission, a new record is created in the database for the burger. The page is updated with the current burger list and the new burger appears on the left side of the page with a button labeled "Devour!" The user may add as many burgers as they would like. When the "Devour!" button is pressed, the record for that burger is updated in the database to show that it has been devoured. The page then updates and the newly devoured burger (along with all previously devoured burgers) is now displayed on the right side of the screen.
 
 ## Technologies Used
 #### Front End
